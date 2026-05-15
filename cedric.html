@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIZERO TSS</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background-color:#efeeee;
+        }
+
+        /* HEADER */
+        header{
+            padding:15px;
+            background: linear-gradient(90deg,#006400,#00cc66);
+            color:white;
+            text-align:center;
+            box-shadow:0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1{
+            margin-top:10px;
+        }
+
+        /* NAVIGATION */
+        nav{
+            margin-top:15px;
+        }
+
+        nav input{
+            padding:10px 20px;
+            margin:5px;
+            border:none;
+            background-color:white;
+            color:green;
+            border-radius:6px;
+            cursor:pointer;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav input:hover{
+            background-color:green;
+            color:white;
+            transform:scale(1.05);
+        }
+
+        /* CONTAINER */
+        .container{
+            width:80%;
+            margin:auto;
+            margin-top:30px;
+        }
+
+        /* CARD */
+        .card{
+            background:white;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        /* TABLE */
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        table, th, td{
+            border:1px solid #ccc;
+        }
+
+        th{
+            background-color:green;
+            color:white;
+            padding:12px;
+        }
+
+        td{
+            padding:12px;
+            text-align:left;
+        }
+
+        /* INPUTS */
+        input[type="text"],
+        input[type="email"]{
+            width:95%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            transition:0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus{
+            border-color:green;
+            outline:none;
+            box-shadow:0 0 5px green;
+        }
+
+        /* BUTTON */
+        .btn{
+            padding:10px 20px;
+            background-color:green;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background-color:darkgreen;
+            transform:scale(1.05);
+        }
+
+        /* FOOTER */
+        footer{
+            background: linear-gradient(90deg,#004d00,#00aa55);
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+        /* ABOUT PAGE */
+        #aboutPage{
+            display:none;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+
+            .container{
+                width:95%;
+            }
+
+            nav input{
+                width:90%;
+            }
+
+            input[type="text"],
+            input[type="email"]{
+                width:92%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>MIZERO TSS Student Profile System</h1>
+
+    <nav>
+        <input type="button" value="Home" onclick="showHome()">
+        <input type="button" value="About" onclick="showAbout()">
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <!-- HOME PAGE -->
+    <div id="homePage">
+
+        <div class="card">
+
+            <h2>Student Information</h2>
+
+            <table>
+
+                <tr>
+                    <th>Student Name</th>
+                </tr>
+
+                <tr>
+                    <td>NIZEYIMANA CEDRIC</td>
+                </tr>
+
+            </table>
+
+            <br>
+
+            <input class="btn" type="button" value="Update Info">
+
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="card">
+
+            <h2>Contact Form</h2>
+
+            <form>
+
+                <input type="text" name="name" placeholder="Enter your name">
+
+                <br><br>
+
+                <input type="email" name="email" placeholder="Enter your email">
+
+                <br><br>
+
+                <input class="btn" type="submit" value="Submit">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="aboutPage" class="card">
+
+        <h2>About Student Project System</h2>
+
+        <p>
+            The MIZERO TSS Student Profile System is a simple web application
+            developed to help manage toknow youstudentveryeasily this web maked by NIZEYIMANA CEDRIC L3SWDA
+        </p>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+    <p> 2026 MIZERO TSS Student Profile System</p>
+    <p>developed by NIZEYIMANA CEDRIC L3SWDA</p>
+
+</footer>
+
+<script>
+
+    function showHome() {
+        document.getElementById("homePage").style.display = "block";
+        document.getElementById("aboutPage").style.display = "none";
+    }
+
+    function showAbout() {
+        document.getElementById("homePage").style.display = "none";
+        document.getElementById("aboutPage").style.display = "block";
+    }
+
+</script>
+
+</body>
+</html>
