@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIRA Clinic Website</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f9fc;
+}
+
+/* HEADER */
+
+header{
+background:#0077b6;
+padding:15px 8%;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+background:#caf0f8;
+padding:80px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:50px;
+color:#023e8a;
+}
+
+.hero-text p{
+margin:20px 0;
+line-height:1.8;
+font-size:18px;
+}
+
+.btn{
+background:#0077b6;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+width:90%;
+max-width:450px;
+border-radius:15px;
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+color:#023e8a;
+margin-bottom:40px;
+}
+
+/* ABOUT */
+
+.about-content{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.about-text{
+flex:1;
+line-height:1.8;
+}
+
+.about-image{
+flex:1;
+text-align:center;
+}
+
+.about-image img{
+width:100%;
+max-width:450px;
+border-radius:15px;
+}
+
+/* SERVICES */
+
+.service-container{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+width:320px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* DOCTORS */
+
+.doctor-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.doctor-card{
+background:white;
+width:280px;
+padding:20px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.doctor-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact-form{
+max-width:700px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.contact-form button{
+width:100%;
+}
+
+/* FOOTER */
+
+footer{
+background:#023e8a;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+flex-direction:column;
+text-align:center;
+margin-top:10px;
+}
+
+.hero{
+flex-direction:column;
+}
+
+.hero-text h1{
+font-size:38px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+    <img src="de.webp" alt="Kila Clinic Logo" width="60">
+    <span>KILA Clinic</span>
+</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#doctors">Doctors</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>Welcome to KIRA Clinic</h1>
+
+<p>
+KIRA clinic help you for treating illness  ,laboratory services etc
+</p>
+
+
+<button class="btn" onclick="visitUs()">
+Visit Us
+</button>
+
+</div>
+
+<div class="hero-image">
+
+<!-- ADD HERO IMAGE HERE -->
+<img src="fe.webp" alt="ADD CLINIC IMAGE HERE">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about-content">
+
+<div class="about-text">
+
+<p>
+Welcome to kila clinic
+</p>
+
+<br>
+
+<p>
+Our mission is to improve health and ensure professional medical care through diagnosis, laboratory testing, treatment and vaccination services.
+</p>
+
+</div>
+
+<div class="about-image">
+
+<!-- ADD ABOUT IMAGE HERE -->
+<img src="de.webp" alt="ADD ABOUT IMAGE HERE">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="service-container">
+
+<div class="card">
+
+<!-- ADD SERVICE IMAGE -->
+<img src="360_F_328711010_f6bB6l9m5mujTzRajQ7DhWwdoXytkb9F.jpg" alt="ADD TREATMENT IMAGE HERE">
+
+<h3>Treatment for Illness</h3>
+
+<p>
+Professional consultation, diagnosis and treatment services.
+</p>
+
+</div>
+
+<div class="card">
+
+<!-- ADD LAB IMAGE -->
+<img src="fe.webp" alt="ADD LAB IMAGE HERE">
+
+<h3>Laboratory Testing</h3>
+
+<p>
+Accurate laboratory testing using modern medical equipment.
+</p>
+
+</div>
+
+<div class="card">
+
+<!-- ADD VACCINE IMAGE -->
+<img src="de.webp" alt="ADD VACCINE IMAGE HERE">
+
+<h3>Vaccination</h3>
+
+<p>
+Safe vaccination services for disease prevention.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DOCTORS -->
+
+<section id="doctors">
+
+<h2 class="section-title">Our Doctors</h2>
+
+<div class="doctor-container">
+
+<div class="doctor-card">
+
+<img src="de.webp" alt="ADD DOCTOR IMAGE HERE">
+
+<h3>Dr. John</h3>
+
+<p>General Practitioner</p>
+
+</div>
+
+<div class="doctor-card">
+
+<img src="360_F_328711010_f6bB6l9m5mujTzRajQ7DhWwdoXytkb9F.jpg" alt="ADD DOCTOR IMAGE HERE">
+
+<h3>Dr. david</h3>
+
+<p>Laboratory Specialist</p>
+
+</div>
+
+<div class="doctor-card">
+
+<img src="360_F_328711010_f6bB6l9m5mujTzRajQ7DhWwdoXytkb9F.jpg" alt="ADD DOCTOR IMAGE HERE">
+
+<h3>Dr. sarah</h3>
+
+<p>Vaccination Expert</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="section-title">Clinic Gallery</h2>
+
+<div class="gallery">
+
+<img src="de.webp" alt="ADD IMAGE HERE">
+<img src="360_F_328711010_f6bB6l9m5mujTzRajQ7DhWwdoXytkb9F.jpg" alt="ADD IMAGE HERE">
+<img src="de.webp" alt="ADD IMAGE HERE">
+<img src="fe.webp" alt="ADD IMAGE HERE">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<form class="contact-form" id="myForm">
+
+<input type="text" placeholder="Enter Your Name" required>
+
+<input type="email" placeholder="Enter Email Address" required>
+
+<textarea rows="6" placeholder="Write Message"></textarea>
+
+<button class="btn" type="submit">
+Submit
+</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 KIRA Clinic | Nyagatare District | All Rights Reserved
+</p>
+
+</footer>
+
+<script>
+
+function appointment(){
+alert("Appointment Booking Successful!");
+}
+
+document
+.getElementById("myForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Form Submitted Successfully!");
+
+});
+
+</script>
+
+</body>
+</html> 
+<div class="social-media">
+
+<a href="https://facebook.com" target="_blank">
+<i class="fab fa-facebook-f"></i> Facebook
+</a>
+
+<a href="https://instagram.com" target="_blank">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a href="https://wa.me/250788123456" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<a href="https://linkedin.com" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+
+</div>
